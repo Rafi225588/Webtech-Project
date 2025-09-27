@@ -1,0 +1,814 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: rgb(11, 66, 132);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Header */
+header {
+  background-color: #2c3e50;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Fix the header at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it stays above the content */
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box;
+  height: 90px; /* Reduce header size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.6s ease;
+}
+
+#logo {
+  width: 160px; /* Adjust the size of the logo */
+  height: 140px; /* Maintain aspect ratio */
+}
+
+header nav {
+  display: flex;
+  gap: 10px; /* Reduce the space between navbar items */
+  flex-wrap: wrap; /* Allows items to wrap if they overflow */
+  justify-content: center; /* Center align items in the navbar */
+}
+
+header nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin-left: 0px;
+  transition: color 0.3s ease;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00aaff;
+}
+
+.professional-button {
+  padding: 10px 20px;
+  background-color: #ffaa00;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.professional-button:hover {
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+}
+
+#signup-link {
+  padding: 10px 20px;
+  color: #fff;
+}
+
+#login-link {
+  padding: 10px 20px;
+  color: #fff;
+}
+
+#signup-link:hover,
+#login-link:hover {
+  color: #00aaff;
+}
+
+/* Align Home button to the right */
+header button.home-button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 14px; /* Reduce font size */
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto; /* Push the button to the right */
+  margin-right: 10px; /* Add space between button and right edge */
+}
+
+header button.home-button:hover {
+  background-color: #a11616;
+}
+
+/* Ensure body and html take full height */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Landing page adjustments */
+#landing-page {
+  background-image: url("landing_background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#landing-page h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#landing-page p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.8;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  animation: popUp 1.5s ease-in-out;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+}
+
+.search-bar button {
+  padding: 12px 30px;
+  background-color: #00aaff;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+p {
+  font-weight: bold;
+}
+
+.center-content h1,
+.center-content p {
+  font-size: 3rem;
+  text-align: center;
+  transition: color 0.5s ease;
+}
+
+.center-content h1:hover {
+  color: rgb(255, 0, 0);
+}
+
+.center-content p:hover {
+  color: rgb(255, 179, 0);
+}
+
+.search-bar button:hover {
+  background-color: #0077cc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header nav {
+    margin-top: 15px;
+  }
+
+  header nav a {
+    margin-left: 10px;
+  }
+
+  #landing-page h1 {
+    font-size: 4rem;
+  }
+
+  #landing-page p {
+    font-size: 1rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    border-radius: 30px;
+  }
+}
+
+/* Forms (Login, Signup, Be a Professional Pages) */
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 10px;
+  box-shadow: 6px 6px 6px 6px rgb(255, 255, 255);
+}
+
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #0080ff;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1abc9c;
+}
+
+form p {
+  text-align: center;
+  font-size: 14px;
+}
+
+form p a {
+  color: #1abc9c;
+}
+
+/* Centering the form content (Login, Signup, Be a Professional) */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ecf0f1;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+/* Additional styling for the Home Button on the Login, Signup, and Be a Professional Pages */
+button.home-button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*LOGIN*/
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#login-page {
+  background-image: url("login-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+form p {
+  text-align: center;
+  font-size: 14px;
+}
+
+form p a {
+  color: #1abc9c;
+}
+
+/* Centering the form content (Login, Signup, Be a Professional) */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ecf0f1;
+  padding: 20px;
+  margin-top: 100px; /* Ensures space below the fixed header */
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  width: 100%; /* Ensures full width for centering */
+}
+
+/* Additional styling for the Home Button on the Login, Signup, and Be a Professional Pages */
+button.home-button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 14px; /* Reduce font size */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*LOGIN*/
+/* Ensure body and html take full height */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* LOGIN page adjustments */
+#login-page {
+  /* Your image path */
+  background-size: cover; /* Ensure the background covers the whole area */
+  background-position: center; /* Position the background image at the center */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0; /* Remove any margin that might cause extra white space */
+  padding: 0; /* Remove any padding that might cause extra white space */
+  color: white; /* Optional: Adjust text color for better contrast */
+}
+
+/*LOGIN-animation*/
+/* Fade-in animation for Login Section */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly lower */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Settle back to the original position */
+  }
+}
+
+/* Apply animation to Login text and the "Don't have an account?" text */
+#login-page header,
+#login-page p {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.2s ease-out forwards; /* Apply fade-in effect */
+}
+#switch-to-signup {
+  color: rgb(243, 238, 2); /* Change the color of the "Sign Up" text to red */
+}
+
+/* Add a delay for text to appear sequentially */
+#login-page header {
+  animation-delay: 0s; /* Header comes first */
+}
+
+#login-page p {
+  animation-delay: 0.1s; /* "Sign Up" text comes after */
+}
+
+/* Login Button (optional, if you want animation for the button) */
+#login-page button {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.1s; /* Button appears last */
+}
+
+/* Forms (Login, Signup, Be a Professional Pages) */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Add space between elements */
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0px; /* Add padding around the form */
+  background-color: transparent; /* Make the background transparent to show the background image */
+  border-radius: 10px;
+  box-shadow: 6px 6px 6px 6px rgba(0.3, 0.3, 0.3, 0.3);
+}
+
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white; /* Set background of the input fields to white */
+}
+
+form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1abc9c;
+}
+
+form p {
+  text-align: center;
+  font-size: 14px;
+}
+
+form p a {
+  color: #1abc9c;
+}
+
+/* Centering the form content (Login, Signup, Be a Professional) */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ecf0f1;
+  padding: 20px;
+  margin-top: 100px; /* Ensures space below the fixed header */
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  width: 100%; /* Ensures full width for centering */
+}
+
+/*border*/
+button.home-button:hover {
+  background-color: #16a085;
+}
+/*Login- End*/
+
+/*Professional*/
+/* PROFESSIONAL SIGNUP PAGE */
+
+/* Ensure body and html take full height */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* PROFESSIONAL SIGNUP page adjustments */
+#professional-signup-page {
+  background-image: url("professional_background.jpg"); /* Your image path */
+  background-size: cover; /* Ensure the background covers the whole area */
+  background-position: center; /* Position the background image at the center */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0; /* Remove any margin that might cause extra white space */
+  padding: 0; /* Remove any padding that might cause extra white space */
+  color: white; /* Optional: Adjust text color for better contrast */
+}
+
+/* PROFESSIONAL SIGNUP ANIMATION */
+/* Fade-in animation for Professional Signup Section */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly lower */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Settle back to the original position */
+  }
+}
+
+/* Apply animation to Professional Signup text and form elements */
+#professional-signup-page header,
+#professional-signup-page main h1,
+#professional-signup-page form {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.2s ease-out forwards; /* Apply fade-in effect */
+}
+
+/* Add a delay for text and form to appear sequentially */
+#professional-signup-page header {
+  animation-delay: 0s; /* Header comes first */
+}
+
+#professional-signup-page main h1 {
+  animation-delay: 0.2s; /* Title comes after header */
+}
+
+#professional-signup-page form {
+  animation-delay: 0.2s; /* Form appears after the title */
+}
+
+/* Sign Up Button (optional, if you want animation for the button) */
+#professional-signup-page button {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.2s; /* Button appears last */
+}
+
+/* Color of "Sign Up as Professional" button */
+#professional-signup-btn {
+  background-color: #ff5733; /* Optional: Add color for the button */
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+/*Professionalend*/
+
+/*signup*/
+/* SIGNUP PAGE */
+/* Ensure body and html take full height */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* SIGNUP page adjustments */
+#signup-page {
+  background-image: url("signup-background.jpg"); /* Your image path */
+  background-size: cover; /* Ensure the background covers the whole area */
+  background-position: center; /* Position the background image at the center */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0; /* Remove any margin that might cause extra white space */
+  padding: 0; /* Remove any padding that might cause extra white space */
+  color: white; /* Optional: Adjust text color for better contrast */
+}
+
+/* SIGNUP ANIMATION */
+/* Fade-in animation for Signup Section */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly lower */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Settle back to the original position */
+  }
+}
+
+/* Apply animation to Signup text and form elements */
+#signup-page header,
+#signup-page main h1,
+#signup-page form {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.2s ease-out forwards; /* Apply fade-in effect */
+}
+
+/* Add a delay for text and form to appear sequentially */
+#signup-page header {
+  animation-delay: 0s; /* Header comes first */
+}
+
+#signup-page main h1 {
+  animation-delay: 0.2s; /* Title comes after header */
+}
+
+#signup-page form {
+  animation-delay: 0.2s; /* Form appears after the title */
+}
+
+/* Sign Up Button (optional, if you want animation for the button) */
+#signup-page button {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.2s; /* Button appears last */
+}
+
+/* Color of "Sign Up" button */
+#signup-btn {
+  background-color: #ff5733; /* Optional: Add color for the button */
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+/* Switch to Login Link */
+#switch-to-login {
+  color: #f3ee02; /* Optional: Change color of the "Login" link */
+  text-decoration: none;
+}
+
+/* Hover effect for the "Login" link */
+#switch-to-login:hover {
+  text-decoration: underline;
+}
+
+/*signup_end*/
+
+/* FOOTER */
+
+.footer {
+  margin-top: 15px;
+}
+
+.foot-panel1 {
+  background-color: #455971;
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  width: bold;
+}
+
+.foot-panel2 {
+  background-color: #222f3d;
+  color: white;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+.foot-panel2 a {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
+}
+
+.foot-panel3 {
+  background-color: #222f3d;
+  color: white;
+  border-top: 0.5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot-panel4 {
+  background-color: #0f1111;
+  color: white;
+  height: 100px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.pages {
+  padding-top: 25px;
+}
+.copyright {
+  padding-top: 5px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  color: #000;
+  width: 400px; /* Increased width */
+}
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu option {
+  padding: 8px; /* Reduced padding for better spacing */
+  cursor: pointer;
+}
+
+.dropdown-menu option:hover {
+  background-color: #f1f1f1;
+}

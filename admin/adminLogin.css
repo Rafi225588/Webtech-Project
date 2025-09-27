@@ -1,0 +1,103 @@
+/* adminLogin.css */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 360px;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 24px;
+  color: #343a40;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ced4da;
+  border-radius: 12px;
+  font-size: 14px;
+  background: #f8f9fa;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  background: #ffffff;
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+small {
+  display: block;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #6c757d;
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+.form-group input {
+  width: 90%;
+}
+.btn{
+    width: 100%;
+}

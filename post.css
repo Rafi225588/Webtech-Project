@@ -1,0 +1,206 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Adjusted to align from the top */
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 20px; /* Added padding to prevent overlap with the post button */
+}
+
+/* Post Button */
+.post-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-button:hover {
+  background-color: #45a049;
+}
+
+/* Post Form (Right Slide Window) */
+.post-form {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Posts Section */
+.posts {
+  margin-top: 80px;
+  max-height: calc(
+    100vh - 100px
+  ); /* Ensures the posts container doesn't overflow the viewport */
+  overflow-y: auto; /* Adds scroll functionality if content exceeds the max height */
+  padding-right: 10px; /* Prevents overflow issues with scrollbar */
+}
+
+.post {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post .content {
+  font-size: 18px;
+}
+
+.post .time {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+}
+
+.post .comment-section {
+  margin-top: 15px;
+}
+
+.comment-section textarea {
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.comment-section button {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-section button:hover {
+  background-color: #45a049;
+}
+
+/* Open Post Form */
+.post-form.open {
+  right: 0;
+}
+.close-btn {
+  width: 50px;
+  height: 50px;
+  background: red;
+  color: white;
+  font-weight: bolder;
+}
+.close-btn:hover {
+  cursor: pointer;
+  background: rgb(215, 2, 2);
+}
+.comments {
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.see-more {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.see-more:hover {
+  background-color: #0056b3;
+}
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.comments div {
+  background: rgb(239, 239, 239);
+  border-radius: 5px;
+  padding: 4px 8px;
+  width: fit-content;
+}
+.comment-section form textarea {
+  height: 10vh;
+}
+.comments {
+  margin-top: 10px;
+}
+
+.comment {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.comment-shortened,
+.comment-full {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.toggle-comment {
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.toggle-comment:hover {
+  text-decoration: none;
+}

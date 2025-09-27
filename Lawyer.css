@@ -1,0 +1,479 @@
+/* General Styling */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("Law.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  background-color: #2c3e50; /* Set background color for the header */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 90px;
+  box-sizing: border-box;
+}
+
+#logo {
+  width: 160px;
+  height: 140px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Button styles */
+button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #0077cc;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Section Styling */
+main {
+  padding: 20px;
+}
+
+.lawyer-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.lawyer-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(30% - 20px);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+}
+
+.lawyer-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.lawyer-photo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.lawyer-info {
+  text-align: center;
+}
+
+.stars {
+  cursor: pointer;
+  color: gold;
+}
+
+/* Request, Review, See More Button Styles */
+.request-button,
+.review-button,
+.see-more-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.request-button:hover,
+.review-button:hover{
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.seeMoreBtn:hover {
+  color: #388e3c;
+  transform: scale(1.05);
+}
+
+/* Lawyer Details Panel */
+.lawyer-details {
+  position: fixed;
+  top: 110px;
+  right: -100%;
+  width: 40%;
+  height: 100%;
+  background-color: white;
+  transition: right 0.3s ease;
+  padding: 20px;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.close-details {
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.close-details:hover {
+  background-color: #e14d2a;
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+  margin-top: 15px;
+}
+
+.foot-panel1 {
+  background-color: #455971;
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  width: bold;
+}
+
+.foot-panel2 {
+  background-color: #222f3d;
+  color: white;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+.foot-panel2 a {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
+}
+
+.foot-panel3 {
+  background-color: #222f3d;
+  color: white;
+  border-top: 0.5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot-panel4 {
+  background-color: #0f1111;
+  color: white;
+  height: 100px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.pages {
+  padding-top: 25px;
+}
+
+.copyright {
+  padding-top: 5px;
+}
+
+/* Header styles (already merged with the above header styling) */
+/* Container for search and dropdowns */
+/* Container for search and dropdowns */
+.search-container {
+  display: flex;
+  flex-direction: column; /* Align dropdowns vertically */
+  gap: 20px; /* Space between dropdowns */
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Dropdown styling */
+.dropdown {
+  position: relative;
+  width: 300px; /* Ensure both dropdowns are the same width */
+}
+
+/* Input field styling for both category and district */
+#categoryInput,
+#districtInput {
+  width: 100%;
+  padding: 12px 30px; /* Uniform padding for both */
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* To include padding in the element's total width */
+}
+
+/* Arrow icon inside the dropdown */
+.dropdown-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%); /* Center the arrow vertically */
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position the dropdown below the input */
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+/* Item in the dropdown */
+.dropdown-item {
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%; /* Make the items take up the full width */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown when active */
+.show {
+  display: block;
+}
+
+/* Button styling */
+#searchButton {
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+#searchButton:hover {
+  background-color: #45a049;
+}
+
+/* Show dropdown menu when active */
+.show {
+  display: block;
+}
+
+/* Button styles for better visibility */
+#searchButton {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background-color: #45a049;
+}
+
+/* 0k */
+
+.dynamic-review-form {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 500px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dynamic-review-form textarea {
+  width: 90%;
+  height: 80px;
+  margin-bottom: 5px;
+  padding: 8px;
+  font-size: 14px;
+}
+#review-form {
+  display: none;
+  position: fixed;
+  bottom: 20px; /* Example position */
+  left: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+/* perfect */
+.FahadCard {
+  display: flex;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+}
+
+.leftF {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
+}
+.rightF {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  text-align: center;
+  justify-content: space-between;
+}
+.rightF h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.rightF {
+  font-weight: light;
+}
+.rightF .one {
+  height: 33%;
+}
+.bottomF {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.topF {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.topF img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 8px solid #222f3d;
+  margin-top: 40px;
+}
+.topF .info {
+  text-align: center;
+}
+.topF .info h2 {
+  margin-top: 15px;
+}
+.topF .info h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+.bottomF button {
+  padding: 10px 40px;
+  border-radius: 30px;
+  border: 2px solid black;
+  background: none;
+  margin-bottom: 15px;
+  width: 240px;
+}
+.rightF .one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  background: #388e3c;
+}
+
+.rightF .one h2 {
+  font-size: 18px;
+  color: white;
+}
+
+/* ok */
+
+.myDesign {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.myDesign select {
+  height: 40px;
+}
+.myDesign button {
+  margin-left: 10px;
+}
+.bottomF form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bottomF form textarea {
+  border-radius: 10px;
+  height: 80px;
+  padding: 4px;
+}
+.bottomF form button:hover {
+  transform: scale(1.05);
+  background: #388e3c;
+  color: white;
+}
